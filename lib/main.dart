@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learning_git_flutter/akhil/women_screen.dart';
+import 'package:learning_git_flutter/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: Routes.homePage,
+      routes: Routes.getRoutes(),
     );
   }
 }
@@ -33,6 +36,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   onPressed(page){
     print('open ${page}'); // open pages here -- learning navigator class
+    WomenScreenDart;
   }
   @override
   Widget build(BuildContext context) {

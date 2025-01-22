@@ -31,16 +31,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  onPressed(page){
+    print('open ${page}'); // open pages here -- learning navigator class
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("Learning"),
         ),
-        body:SingleChildScrollView(
+        body:Center(
           child: Column(
             children: [
-              Container(child: Text('Akhil'),),
+             ElevatedButton(onPressed: () => onPressed('men'), child: Text('Men Section')),
+             ElevatedButton(onPressed: () => onPressed('women'), child: Text('Women Section'))
             ],
           ),
         )

@@ -35,8 +35,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   onPressed(page){
+    if(page == 'men'){
+
+    }else if(page =='women') {
+      Navigator.pushNamed(context, Routes.womenPage);
+    }
     print('open ${page}'); // open pages here -- learning navigator class
-    WomenScreenDart;
   }
   @override
   Widget build(BuildContext context) {

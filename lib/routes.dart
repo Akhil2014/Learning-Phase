@@ -6,6 +6,7 @@ class Routes {
   static const String homePage = '/';
   static const String womenPage = '/women';
   static const String menPage = '/men';
+  static const String kidPage = '/kid';
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {

@@ -5,6 +5,7 @@ import 'package:learning_git_flutter/main.dart';
 class Routes {
   static const String homePage = '/';
   static const String womenPage = '/women';
+  static const String menPage = '/men';
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {

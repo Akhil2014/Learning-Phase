@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:learning_git_flutter/model/women_product_model.dart'; // Import the model
+import 'package:learning_git_flutter/model/women_product_model.dart';
+import 'package:learning_git_flutter/routes.dart'; // Import the model
 
 class WomenScreenDart extends StatefulWidget {
   @override
@@ -42,8 +43,9 @@ class _WomenScreenDartState extends State<WomenScreenDart> {
     }
   }
 
-  void addToWish() {
-
+  void addToWish(item) {
+    print('akhilkhan ${item}');
+   Navigator.pushNamed(context,  Routes.wishList);
   }
 
   @override
@@ -69,7 +71,7 @@ class _WomenScreenDartState extends State<WomenScreenDart> {
               ),
               title: Text(product.title),
               subtitle: Text('\$${product.price.toStringAsFixed(2)}'),
-              trailing: ElevatedButton(onPressed: () => addToWish(), child: Text('Add to WishList')),
+              trailing: ElevatedButton(onPressed: () => addToWish(product), child: Text('Add to WishList')),
             ),
           );
         },

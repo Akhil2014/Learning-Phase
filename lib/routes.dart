@@ -8,6 +8,7 @@ class Routes {
   static const String womenPage = '/women';
   static const String menPage = '/men';
   static const String wishList = '/wishlist';
+  static const String cartList = '/cartlist';
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {
